@@ -80,3 +80,13 @@ const prev = () => {
   toggleprev();
   togglenext();
 };
+
+
+const bganmine = document.getElementById("colorbox");
+
+for (let i = 0; i < 400; i++) {
+ const colorBox = document.createElement('div');
+ colorBox.classList.add('colorbox');
+ bganmine.append(colorBox)
+  
+}

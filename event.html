@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="drop-shadow-lg">
+    <nav class="drop-shadow-lg sticky md:z-10">
         <div class="navbar bg-[#142850]">
             <div class="  shadow-lg ">
 
@@ -33,7 +33,13 @@
         </div>
 
     </nav>
-    <section class="main-section">
+    <section class="main-section relative">
+        <div id="colorbox">
+            <div class="bganime absolute top-0 left-0 w-full h-16 bg-blue-600 blur-[60px] z-10">
+        
+            </div>
+          </div>
+        
         <div class=" min-w-[25%] md:w-[10%] md:py-8 bg-[#27496D] shadow-lg z-10 sidebar fixed top-[40px] md:static"
             id="sidebar">
             <ul class="event-links">
@@ -401,7 +407,21 @@
 
     </section>
 
+    <footer
+      class=" relative p-4 bg-white rounded-sm shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-8 lg:hidden">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://mescollege.com"
+          class="hover:underline">Genesis_5.0™</a>. All Rights Reserved.
+      </span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+          <a href="#aboutus" class="mr-4 hover:underline md:mr-6 ">About</a>
+        </li>
 
+        <li>
+          <a href="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </footer>
 
 
     </section>

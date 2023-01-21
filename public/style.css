@@ -66,7 +66,7 @@ li > a {
   top: -1px;
   z-index: 98;
  justify-content: space-between;
-  padding: 0 5%;
+  padding: 0 6%;
   align-items: center;
 }
 .navbar {
@@ -83,6 +83,7 @@ li > a {
   overflow-x: hidden;
   perspective: 10px;
   position: relative;
+  z-index: 97;
 }
 
 .wrapper {
@@ -101,21 +102,21 @@ header {
 }
 
 .background {
-  transform: translateZ(-10px) scale(2);
-
+  transform: translateZ(-10px) scale(2.1);
+height: 100%;
   width: 100%;
 }
 
 .foreground {
   transform: translateZ(-5px) scale(1.5);
-  width: 50%;
+  width: 52%;
+  height: 83%;
+  top: -23px;
 }
 
 .background,
 .foreground {
   position: absolute;
-  height: 100%;
-
   object-fit: cover;
   z-index: -1;
 }
@@ -150,7 +151,7 @@ section {
 
 .notvissible {
   opacity: 0;
-  filter: blur(5px);
+  filter: blur(2px);
   transform: translateX(-100%);
   transition: all 1s;
 }
@@ -306,6 +307,48 @@ padding: 32px 0;
   
 }
 
+
+#colorbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(20 , 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background: #131316;
+  filter: saturate(2);
+  overflow: hidden;
+  }
+  
+  .colorbox{
+    z-index: 28;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+   
+    background: #131316;
+  }
+  
+  .colorbox:hover{
+    background-color: #00bfff;
+    transition-duration: 0s;
+  }
+  
+  .bganime{
+    animation: bganime 6s linear infinite;
+  }
+  
+  @keyframes bganime {
+    0%{
+  top: -60px;
+    }100%{
+  top: 120%;
+    }
+  }
+
 @media screen and (max-width: 1360px) {
   .foreground {
     transform: translateZ(-5px) scale(1.5);
@@ -333,8 +376,9 @@ padding: 32px 0;
 
   .foreground {
     transform: translateZ(-5px) scale(1.5);
-    width: 100%;
-    height: 65%;
+    width: 98%;
+    height: auto;
+    top: -19px;
   }
 
   .background,
@@ -408,6 +452,21 @@ min-width: 25%;
   #day2{
     min-height: 10vh;
   }
+
+  #colorbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(10 , 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background: #131316;
+    filter: saturate(2);
+    overflow: hidden;
+    }
  
 }
 
@@ -471,7 +530,6 @@ min-width: 25%;
   filter: grayscale(0%);
   /* animation: mymove .3s infi nite; */
 }
-
 
 
 
